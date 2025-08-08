@@ -40,7 +40,7 @@ app.post('/login', async (req, res) => {
   res.json({ token });
 });
 app.use(express.static(path.join(__dirname, 'dist')));
-// to use wild route express version must be  "express": "^4.18.2",
+// to use wild card express version must be  "express": "^4.21.2",
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
